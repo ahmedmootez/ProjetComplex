@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="671dp"
+            android:layout_above="@+id/Linear">
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/spacetext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5dp"/>
+                <TextView
+                    android:id="@+id/starttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/alicenew"
+                    android:layout_below="@+id/spacetext2"
+                    android:textColor="@color/white"
+                    android:textStyle="bold|italic"
+                    android:textSize="18dp"
+                    android:maxWidth="320dp"
+                    android:background="@drawable/botbubble" />
+                <TextView
+                    android:id="@+id/spacetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="5dp"
+                    android:layout_below="@id/starttext" />
+                <Button
+                    android:id="@+id/someButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/botbuttons"
+                    android:drawableLeft="@drawable/alicenew"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:maxWidth="320dp"
+                    android:onClick="CLICKME"
+                    android:tag="kuch bhi"
+                    android:layout_below="@+id/spacetext"
+                    android:text="What are the different types of categories" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/Linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:weightSum="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="3.5"
+                android:hint="Type message"
+                android:background="@drawable/typemessage"
+                android:id="@+id/typeMessage"
+                android:textColorHint="@color/colorPrimary" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/sendbtnres"
+                android:id="@+id/sendButton"
+                android:text="Send"
+                android:textColor="@color/White"
+                android:onClick="SEND_ONCLICK"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
